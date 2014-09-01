@@ -6,34 +6,54 @@ import scraper
 
 def main():
     """does the work, does not have the classes"""
-    # make the nodes from the .csv file and put them into a linked list
-    scraper.scraper()
-    with open('output.csv', 'r') as csv_file:
+    scraper.scraper()   # run the scraper
+
+    with open('output.csv', 'r') as csv_file:   #open file until done reading
         lists = LinkedList.LinkedList()
+
         for row in csv_file:
-            disease_text = repr(row.strip())
-            lists.new_node(disease_text)
+        # make the nodes from the .csv file and put them into a linked list
+            state_text = repr(row.strip())
+            lists.new_node(state_text)
 
-    # print the list to the console
-    #(currently prints in reverse order of addition to the list)
-    current_node = lists.head
-    while current_node.next != None:
-        print current_node.cargo
-        current_node = current_node.next
+    lists.print_list()
 
-    # print only the diseases beginning with user inputted letter
+    # bools for loops, self-explanatory names
     has_state = False
-    search_for = raw_input("\nEnter a letter to narrow search (A-G): ")
-    print " "
-    current_node = lists.head
-    while current_node.next != None:
-        if current_node.cargo[1] == search_for.upper():
-            print current_node.cargo
-            has_state = True
-        current_node = current_node.next
-    if has_state == False:
-        print "List not extensive enough, no state or territory found."
-    print " "
+    still_search = True
+
+    while still_search:
+        search_for = raw_input("\nEnter a letter to narrow search "
+            "(1: exit, 0: whole list): ")
+        print " "
+
+        if search_for == "0":
+        # print whole list
+            lists.print_list()
+
+        elif search_for == "1":
+        # quit
+            print "Ending search.\n"
+            still_search = False
+
+        else:
+        # print only the states beginning with user inputted letter
+            current_node = lists.head
+
+            while current_node.next != None:
+                # navigate list until the end
+                if current_node.cargo[0] == search_for.upper():
+                    # if state starts with input, has_state = True
+                    print current_node.cargo
+                    has_state = True
+                current_node = current_node.next
+
+            if has_state == False:
+                # if no states are found
+                print "No state or territory found."
+
+        has_state = False
+
 
 if __name__ == "__main__":
     main()

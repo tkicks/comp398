@@ -4,20 +4,25 @@ import urllib2
 import csv
 
 def main():
+    """run scraper function"""
     scraper()
 
 def scraper():
-    """open page, scrapes li's inside ul's to get the text and writes to .csv"""
+    """open page, scrape <li>s inside <ul>s to get the text and write to .csv"""
 
+    # init BeautifulSoup on webpage
     wiki = "http://www.ilru.net/html/publications/directory/state_list.html"
     page = urllib2.urlopen(wiki)
     soup = BeautifulSoup(page)
 
     state = ""
 
+    # find all <ul>
     table = soup.find("ul")
+    # while writing to file keep it open
     with open('output.csv', 'w') as csv_file:
 
+        # find all <li> and write the text inside to the file
         for row in table.findAll("li"):
             state = row.findAll(text=True)
 
