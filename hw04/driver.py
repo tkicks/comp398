@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import converter
-import converter2
+#import converter2
+import converter3
 
 def main():
 	"""
@@ -9,8 +10,8 @@ def main():
 		No input
 	"""
 	#test_text = converter.getFile()
-	test_text = converter2.getFile()
-	test_text = converter2.convert(test_text)
+	test_text = converter3.getFile()
+	test_text = converter3.convert(test_text)
 	#test_text = converter.ptags("Test text")
 
 	with open("test.html", 'w') as html_file:
