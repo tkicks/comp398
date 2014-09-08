@@ -9,17 +9,28 @@ def the_work(text):
         <blockquote>. After, returns the new text to convert().
     """
 
-    new_text = ""
-    has_block = False
+    new_text = ""       # string for new text
+    last_word = ""      # the last word checked
+    has_block = False   # is inside a blockquote?
 
     for word in text:
 
-        if word == ">":
+        if word == ">" and last_word == " ":
+            # if bq initiator and the last word was a space
+            # add a <bq> and declare being in bq
             new_text = new_text + "<blockquote>"
             has_block = True
+            last_word = word
         elif word == "\n" and has_block == True:
+            # catch an ending bq at the newline char
+            # declare being out of bq after closing
             new_text = new_text + "</blockquote>" + word
+            has_block = False
+            last_word = word
         else:
+            # default
+            # add word to new text
             new_text = new_text + word
+            last_word = word
 
     return new_text

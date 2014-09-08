@@ -1,4 +1,12 @@
-/* make the h1 tags display inline instead of stacking */
+/*make the h1 tags display inline instead of stacking */
 h1 {
 	display: inline;
+	/*only use margin for test.md*/
+	margin-left: 42%;
+}
+
+/*only use for test.md*/
+img {
+	display: inline-block;
+	margin-left: 37%;
 }
