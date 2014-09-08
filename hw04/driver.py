@@ -1,24 +1,24 @@
 #!/usr/bin/env python
+"""
+The driver program
+"""
 import converter
-#import converter2
-import converter3
 
 def main():
-	"""
-		Runs the converter file
+    """
+        Runs the converter file
 
-		No input
-	"""
-	#test_text = converter.getFile()
-	test_text = converter3.getFile()
-	test_text = converter3.convert(test_text)
-	#test_text = converter.ptags("Test text")
+        No input
+    """
 
-	with open("test.html", 'w') as html_file:
-		html_file.write(str(test_text))
+    html_setup = ("<head>\n<link rel=\"stylesheet\" type=\"text/css\" "
+        "href=\"stylesheet.css\"/>\n")
+    test_text = converter.get_file()
+    test_text = converter.convert(test_text)
 
-
-
+    with open("test.html", 'w') as html_file:
+        html_file.write(html_setup)
+        html_file.write(str(test_text))
 
 
 if __name__ == "__main__":

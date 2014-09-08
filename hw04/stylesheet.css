@@ -1,0 +1,4 @@
+/* make the h1 tags display inline instead of stacking */
+h1 {
+	display: inline;
+}
