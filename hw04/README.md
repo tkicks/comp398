@@ -1,6 +1,6 @@
 # Homework 4  
 
-For this homework I have used *Python* to implement a **basic__ [Markdown](http://daringfireball.net/projects/markdown/) to HTML converter. This converter can handle paragraphs, headers, block quotes, emphasis, lists, links, images, and code (see [Markdown Basics](http://daringfireball.net/projects/markdown/basics)).  
+For this homework I have used *Python* to implement a **basic** [Markdown](http://daringfireball.net/projects/markdown/) to HTML converter. This converter can handle paragraphs, headers, block quotes, emphasis, lists, links, images, and code (see [Markdown Basics](http://daringfireball.net/projects/markdown/basics)).  
 
 The code abides by the [Google Python style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). The program will prompt the user to enter a file name to convert.  
 
