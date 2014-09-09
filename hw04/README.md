@@ -1,6 +1,6 @@
 # Homework 4  
 
-For this homework I have used *Python* to implement a basic [Markdown](http://daringfireball.net/projects/markdown/) to HTML converter. This converter can handle paragraphs, headers, block quotes, emphasis, lists, links, images, and code (see [Markdown Basics](http://daringfireball.net/projects/markdown/basics)).  
+For this homework I have used *Python* to implement a **basic__ [Markdown](http://daringfireball.net/projects/markdown/) to HTML converter. This converter can handle paragraphs, headers, block quotes, emphasis, lists, links, images, and code (see [Markdown Basics](http://daringfireball.net/projects/markdown/basics)).  
 
 The code abides by the [Google Python style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). The program will prompt the user to enter a file name to convert.  
 
@@ -12,3 +12,6 @@ In this folder is:
 + Sample input Markdown file that exhaustively demonstrates your converter
 + HTML output of running your driver program with the sample Markdown input
 + HTML output of running your driver program with the README input
++ CSS stylesheet for h1 tags (and centering for test.md)  
+
+*Only use* `display: inline;` *for* `h1`*.*
