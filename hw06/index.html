@@ -10,50 +10,7 @@
 	<body>
 
 		<header>
-			<!-- dropdown menu to choose department -->
-			<select id="departments">
-				<option value="default" selected>Choose Department</option>
-				<option value="AfAmDia">African/African American/Diaspora Studies</option>
-				<option value="anthro">Anthropology</option>
-				<option value="arabic">Arabic</option>
-				<option value="arthist">Art History</option>
-				<option value="artstud">Art Studio</option>
-				<option value="astro">Astronomy</option>
-				<option value="bio">Biology</option>
-				<option value="chem">Chemistry</option>
-				<option value="chinese">Chinese</option>
-				<option value="classics">Classics</option>
-				<option value="comp">Computer Science</option>
-				<option value="creawrite">Creative Writing</option>
-				<option value="econ">Economics</option>
-				<option value="edu">Education</option>
-				<option value="eng">English</option>
-				<option value="french">French</option>
-				<option value="fys">First Year Seminar</option>
-				<option value="german">German</option>
-				<option value="greek">Greek</option>
-				<option value="hisp">Hispanic Studies</option>
-				<option value="hist">History</option>
-				<option value="inter">Interdepartmental</option>
-				<option value="intrel">International Relations</option>
-				<option value="ital">Italian Studies</option>
-				<option value="japanese">Japanese</option>
-				<option value="latin">Latin</option>
-				<option value="math">Mathematics</option>
-				<option value="mgmt">Business and Management</option>
-				<option value="music">Music</option>
-				<option value="musicperf">Music Performance</option>
-				<option value="neuro">Neuroscience</option>
-				<option value="phil">Philosophy</option>
-				<option value="physics">Physics</option>
-				<option value="polsci">Political Science</option>
-				<option value="psych">Psychology</option>
-				<option value="religion">Religion</option>
-				<option value="russian">Russian</option>
-				<option value="soc">Sociology</option>
-				<option value="theatre">Theatre</option>
-				<option value="womens">Women's and Gender Studies</option>
-			</select>
+			<!-- dropdown menu to choose department not featured as scraper doesn't work and would be too much work to do by hand -->
 		</header>
 
 
@@ -62,56 +19,59 @@
 				level of study vs classes points connected by requirements
 				default = number of classes vs department-->
 			<section id="visualizer">
+
+				<p class="department_title"></p>
 				
 				<svg version="1.1"
 					baseProfile="full"
-					width="80%"
-					height="75%"
+					width="800px"
+					height="1800px"
 					xmlns="http://www.w3.org/2000/svg">	<!-- <-namespace -->
 
-				<!-- course bar graph rectangels
-					calculate heights -->
-				<rect id="afam"		x="0"       y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="anthro"	x="2.56%"   y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="arabic"	x="5.12%"   y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="arthist"	x="7.68%"   y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="artstud"	x="10.24%"  y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="astro"	x="10%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="bio"		x="12%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="chem"		x="14%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="chinese"	x="16%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="classics"	x="18%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="comp"		x="20%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="creawrite"x="22%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="econ"		x="24%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="edu"		x="26%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="eng"		x="28%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="french"	x="30%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="fys"		x="32%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="german"	x="34%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="greek"	x="36%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="hisp"		x="38%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="hist"		x="40%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="inter"	x="42%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="intrel"	x="44%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="ital"		x="46%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="japanese"	x="48%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="latin"	x="50%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="math"		x="52%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="mgmt"		x="54%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="music"	x="56%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="musicperf"x="58%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="neuro"	x="60%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="phil"		x="62%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="physics"	x="64%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="polsci"	x="66%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="psych"	x="68%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-				<rect id="religion"	x="70%" y="90%" width="2.56%" height="10%" fill="red"></rect>
-				<rect id="russian"	x="72%" y="90%" width="2.56%" height="10%" fill="black"></rect>
-				<rect id="soc"		x="74%" y="90%" width="2.56%" height="10%" fill="green"></rect>
-				<rect id="theatre"	x="76%" y="90%" width="2.56%" height="10%" fill="orange"></rect>
-				<rect id="womens"	x="78%" y="90%" width="2.56%" height="10%" fill="blue"></rect>
-
+				<g transform="rotate(180) translate(-800 -1800)">
+				<!-- displays graph in reverse order to get bars going up -->
+					<!-- course bar graph rectangels -->
+					<rect id="afam"		x="0"       y="90%" width="2.56%" height="10px" fill="red"></rect>
+					<rect id="anthro"	x="2.56%"   y="90%" width="2.56%" height="120px" fill="black"></rect>
+					<rect id="arabic"	x="5.12%"   y="90%" width="2.56%" height="30px" fill="green"></rect>
+					<rect id="arthist"	x="7.68%"   y="90%" width="2.56%" height="150px" fill="orange"></rect>
+					<rect id="artstud"	x="10.24%"  y="90%" width="2.56%" height="240px" fill="blue"></rect>
+					<rect id="astro"	x="12.8%" 	y="90%" width="2.56%" height="50px" fill="red"></rect>
+					<rect id="bio"		x="15.4%" 	y="90%" width="2.56%" height="370px" fill="black"></rect>
+					<rect id="chem"		x="17.96%" 	y="90%" width="2.56%" height="350px" fill="green"></rect>
+					<rect id="chinese"	x="20.52%" 	y="90%" width="2.56%" height="30px" fill="orange"></rect>
+					<rect id="classics"	x="23.08%" 	y="90%" width="2.56%" height="40px" fill="blue"></rect>
+					<rect id="comp"		x="25.64%" 	y="90%" width="2.56%" height="120px" fill="red"></rect>
+					<rect id="creawrite"x="28.2%" 	y="90%" width="2.56%" height="70px" fill="black"></rect>
+					<rect id="econ"		x="30.76%" 	y="90%" width="2.56%" height="150px" fill="green"></rect>
+					<rect id="edu"		x="33.32%" 	y="90%" width="2.56%" height="100px" fill="orange"></rect>
+					<rect id="eng"		x="35.88%" 	y="90%" width="2.56%" height="440px" fill="blue"></rect>
+					<rect id="french"	x="38.44%" 	y="90%" width="2.56%" height="100px" fill="red"></rect>
+					<rect id="fys"		x="41%" 	y="90%" width="2.56%" height="290px" fill="black"></rect>
+					<rect id="german"	x="43.56%" 	y="90%" width="2.56%" height="80px" fill="green"></rect>
+					<rect id="greek"	x="46.12%" 	y="90%" width="2.56%" height="20px" fill="orange"></rect>
+					<rect id="hisp"		x="48.68%" 	y="90%" width="2.56%" height="170px" fill="blue"></rect>
+					<rect id="hist"		x="51.24%" 	y="90%" width="2.56%" height="200px" fill="red"></rect>
+					<rect id="inter"	x="53.8%" 	y="90%" width="2.56%" height="70px" fill="black"></rect>
+					<rect id="intrel"	x="56.36%" 	y="90%" width="2.56%" height="10px" fill="green"></rect>
+					<rect id="ital"		x="58.92%" 	y="90%" width="2.56%" height="80px" fill="orange"></rect>
+					<rect id="japanese"	x="61.48%" 	y="90%" width="2.56%" height="20px" fill="blue"></rect>
+					<rect id="latin"	x="64.04%" 	y="90%" width="2.56%" height="40px" fill="red"></rect>
+					<rect id="math"		x="66.6%" 	y="90%" width="2.56%" height="170px" fill="black"></rect>
+					<rect id="mgmt"		x="69.16%" 	y="90%" width="2.56%" height="70px" fill="green"></rect>
+					<rect id="music"	x="71.72%" 	y="90%" width="2.56%" height="180px" fill="orange"></rect>
+					<rect id="musicperf"x="74.28%" 	y="90%" width="2.56%" height="260px" fill="blue"></rect>
+					<rect id="neuro"	x="76.84%" 	y="90%" width="2.56%" height="20px" fill="red"></rect>
+					<rect id="phil"		x="79.4%"	y="90%" width="2.56%" height="110px" fill="black"></rect>
+					<rect id="physics"	x="81.96%" 	y="90%" width="2.56%" height="150px" fill="green"></rect>
+					<rect id="polsci"	x="84.52%" 	y="90%" width="2.56%" height="180px" fill="orange"></rect>
+					<rect id="psych"	x="87.08%" 	y="90%" width="2.56%" height="270px" fill="blue"></rect>
+					<rect id="religion"	x="89.64%" 	y="90%" width="2.56%" height="120px" fill="red"></rect>
+					<rect id="russian"	x="92.2%" 	y="90%" width="2.56%" height="50px" fill="black"></rect>
+					<rect id="soc"		x="94.76%" 	y="90%" width="2.56%" height="150px" fill="green"></rect>
+					<rect id="theatre"	x="97.32%" 	y="90%" width="2.56%" height="110px" fill="orange"></rect>
+					<rect id="womens"	x="99%" 	y="90%" width="2.56%" height="110px" fill="blue"></rect>
+					</g>
 
 				</svg>
 			
@@ -121,8 +81,9 @@
 
 
 		<footer>
-			<p id="footer">
-				Created by Tyler Kickham.
+			<p>x-axis: Department</p>
+			<p>y-axis: Number of classes</p>
+			<p>Created by Tyler Kickham.</p>
 		</footer>
 
 

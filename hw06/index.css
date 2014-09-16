@@ -4,11 +4,12 @@ svg {
 }
 
 footer {
+	/* keeps the footer in the bottom left */
 	bottom: 0;
 	left: 0;
 	position: absolute;
 }
 
-#departments {
-	/* nothing yet */
+.department_title {
+	font-size: 2em;
 }

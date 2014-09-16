@@ -1,1 +1,1 @@
-Data not scraped yet because of 404 error on course list in scraper. Fun. For the commit.
+Data not scraped because of my inability to get around the 404 error. I'm not sure about how POSTing works so it's a tiny bit of a problem that caused a lot more work. Fun. Lots of fun.
