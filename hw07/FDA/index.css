@@ -1,7 +1,11 @@
+body {
+
+	font-family: Helvetica;
+}
+
 h1 {
 	font-size: 50px;
 	font-weight: 900;
-	font-family: Helvetica;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -13,10 +17,6 @@ p {
 
 table {
 	width: 100%;
-}
-
-td {
-	width: 25%;
 }
 
 .border {
@@ -34,7 +34,7 @@ td {
 
 /* classes for table */
 .first {
-	width: 40%;
+	width: 3%;
 }
 
 .rest {
