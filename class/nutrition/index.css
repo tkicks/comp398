@@ -1,7 +1,10 @@
+body {
+	font-family: Helvetica;
+}
+
 h1 {
 	font-size: 50px;
 	font-weight: 900;
-	font-family: Helvetica;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
