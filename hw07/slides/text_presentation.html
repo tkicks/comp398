@@ -1,0 +1,46 @@
+
+
+<!Doctype html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+  	<title>CSS Text</title>
+  	
+  	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Neuton:200,300,400,700,800,400italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+<div id="impress">
+
+<div class="step slide" data-x="0" data-y="0">
+        TEXT
+</div>
+
+
+<div class="step slide" data-x="0" data-y="1000" data-scale="3">
+        <p><span id="close_space">TEX</span><span id="far_space">TS</span><span id="close_space">PACIN</span><span id="far_space">GIS</span><span id="close_space">IMPORTANT</span></p>
+</div>
+
+<div class="step slide" data-x="1000" data-y="1500" data-rotate="180" data-scale="3">
+        <p id="inline_please"><span id="close_word">AS IS</span><span id="far_word">WORD SPACING</span></p>
+</div>
+
+
+<div class="step slide" data-x="400" data-y="3000" data-rotate="180" data-scale="2">
+        <p id="moved_over"><span id="no_wspace">And when there is no wrapping the whitespace, the text will just keep going and going and going and going and going and going and going and going and going and going and going<br/>until a line break is<br/>placed in.</span></p>
+        <p id="moved_over"><span id="pl_wspace">  This differs from all other white space manipulators, like pre-line whitespace.  The others will all cut off the line at the browser's discretion, or when there is a line break.  Except for pre.</span></p>
+
+
+
+</div>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+
+</html>
