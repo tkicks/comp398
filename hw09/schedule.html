@@ -3,37 +3,79 @@
 	<head>
 		<title>Visualize Classes</title>
 		<link rel="stylesheet" href="index.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="index.js"></script>
 	</head>
 
 	<body>
 
 		<main>
 			<!-- data visualization
-				level of study vs classes points connected by requirements
-				default = number of classes vs department-->
+			level of study vs classes points connected by requirements
+			default = number of classes vs department
+				-->
 			<section id="visualizer">
 
-				<p class="department_title"></p>
 				
-				<svg version="1.1"
-					baseProfile="full"
-					width="800px"
-					height="1800px"
-					xmlns="http://www.w3.org/2000/svg">	<!-- <-namespace -->
+				<!--
+					Comp:
+					Fall 2003: 56
+					Spring 2004: 61
+					Spring 2014: 151
+					Fall 2014: 145
+
+					Math:
+					Fall 2003: 233
+					Spring 2004: 229
+					Spring 2014: 341
+					Fall 2014: 368
+
+					Total:
+					Fall 2003: 289
+					Spring 2004: 290
+					Spring 2014: 492
+					Fall 2014: 513
+				-->
+
+
+
+				<svg version="1.1" baseProfile="full" x="300" y="300" width="1000px" height="450px" xmlns="http://www.w3.org/2000/svg" role="img">	<!-- <-namespace -->
+					<title>Seats Taken Comparisons</title>
+					<desc>Side by side rectangles, left green to represent Computer Science and right red to represent Mathematics, to compare the number of seats taken in each department.</desc>
+
+					<rect id="comp_fall_03: 56 seats taken" 	x="0" 		y="0" width="193.8" height="50" style="fill: rgb(0, 255, 0)" role="img" />
+					<text x="0" y="25" font-size=".75em">Computer Science Fall 2003</text>
+					<rect id="math_fall_03: 233 seats taken" 	x="193.8" 	y="0" width="806.2" height="50" style="fill: rgb(255, 0, 0)" role="img" />
+					<text x="193.8" y="25" font-size=".75em">Mathematics Fall 2003</text>
+
+					<rect id="comp_spring_04: 61 seats taken" 	x="0" 		y="125" width="210.3" height="50" style="fill: rgb(0, 255, 0)" role="img" />
+					<text x="0" y="150" font-size=".75em">Computer Science Spring 2004</text>
+					<rect id="math_spring_04: 229 seats taken" 	x="210.3" 	y="125" width="789.7" height="50" style="fill: rgb(255, 0, 0)" role="img" />
+					<text x="210.3" y="150" font-size=".75em">Mathematics Spring 2004</text>
+
+					<rect id="comp_spring_14: 151 seats taken" x="0" 		y="250" width="306.9" height="50" style="fill: rgb(0, 255, 0)" role="img" />
+					<text x="0" y="275" font-size=".75em">Computer Science Spring 2014</text>
+					<rect id="math_spring_14: 341 seats taken" x="306.9" 	y="250" width="693.1" height="50" style="fill: rgb(255, 0, 0)" role="img" />
+					<text x="306.9" y="275" font-size=".75em">Mathematics Spring 2014</text>
+
+					<rect id="comp_fall_14: 145 seats taken" x="0" 		y="375" width="282.7" height="50" style="fill: rgb(0, 255, 0)" role="img" />
+					<text x="0" y="400" font-size=".75em">Computer Science Fall 2014</text>
+					<rect id="math_fall_14: 368 seats taken" x="282.7" 	y="375" width="717.3" height="50" style="fill: rgb(255, 0, 0)" role="img" />
+					<text x="282.7" y="400" font-size=".75em">Mathematics Fall 2014</text>
+
 
 
 				</svg>
-			
+
+
+				<p class="department_stats"></p>
+
 			</section>
 
 		</main>
 
-
 		<footer>
 			<p>Created by Tyler Kickham.</p>
 		</footer>
-
-
 	</body>
-
 </html>

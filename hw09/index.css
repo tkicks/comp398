@@ -1,0 +1,18 @@
+svg {
+	margin: auto;
+	display: block;
+}
+
+footer {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+
+.department_stats {
+	font-size: 2em;
+	margin-left: 250px;
+	margin-right: 250px;
+	text-align: center;
+	height: 3em;
+}
