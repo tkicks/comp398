@@ -1,0 +1,15 @@
+body {
+	background: linear-gradient(180deg, black, white);
+	background-repeat: no-repeat;
+}
+
+footer {
+	color: #000;
+}
+
+footer #hr {
+	border-color: #ff0;
+	border: none;
+	border-top: thick double;
+	text-align: center;
+}
