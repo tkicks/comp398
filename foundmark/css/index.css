@@ -13,3 +13,12 @@ footer #hr {
 	border-top: thick double;
 	text-align: center;
 }
+
+#previews {
+	height: 308px;
+	overflow: hidden;
+}
+
+#progressbar{
+	white-space: nowrap;
+}
