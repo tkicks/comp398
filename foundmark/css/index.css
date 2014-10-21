@@ -1,24 +1,50 @@
+/* HTML Elements */
+
 body {
-	background: linear-gradient(180deg, black, white);
-	background-repeat: no-repeat;
+  background: linear-gradient(180deg, black, white);
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', Helvetica, Arial;
 }
 
 footer {
-	color: #000;
+  color: #000;
 }
 
 footer #hr {
-	border-color: #ff0;
-	border: none;
-	border-top: thick double;
-	text-align: center;
+  border: none;
+  border-color: #ff0;
+  border-top: thick double;
+}
+
+/* IDs */
+
+#genomic,
+#lexomics,
+#map,
+#person,
+#prof,
+#teach {
+  font-family: 'Montserrat', Helvetica, Arial;
 }
 
 #previews {
-	height: 308px;
-	overflow: hidden;
+  height: 308px;
+  overflow: hidden;
 }
 
-#progressbar{
-	white-space: nowrap;
+#progress-bar{
+  white-space: nowrap;
+}
+
+#travels {
+  border: 0;
+  height: 308px;
+  width: 100%;
+}
+
+#valid-css {
+  border: 0;
+  height: 31px;
+  margin-left: 45%;
+  width: 88px;
 }

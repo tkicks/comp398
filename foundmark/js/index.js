@@ -128,8 +128,8 @@ $(function() {
 
     // if he's already back fill up entire bar and say he's been gone
     if ((daysLeft) <= 0) {
-		document.getElementById('progressbar').style.width = 100 + "%";
-        document.getElementById('progressbar').innerHTML="Mark's returned";
+		document.getElementById('progress-bar').style.width = 100 + "%";
+        document.getElementById('progress-bar').innerHTML="Mark's returned";
     }
     
     // if he isn't back yet fill up what percent is completed and say how much
@@ -140,7 +140,7 @@ $(function() {
         }
 
         console.log(percent + "% of the way through sabbatical");
-        document.getElementById('progressbar').style.width = percent + "%";
-        document.getElementById('progressbar').innerHTML = percent + "% of sabbatical completed.  " + daysLeft + " days left";
+        document.getElementById('progress-bar').style.width = percent + "%";
+        document.getElementById('progress-bar').innerHTML = percent + "% of sabbatical completed.  " + daysLeft + " days left";
     }
 })

@@ -1,2 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /img/
+
+Sitemap: http://foundmark.me/sitemap.xml

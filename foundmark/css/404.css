@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(180deg, black, white);
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', Helvetica, Arial;
+}
+
+#searching {
+	margin-left: 30%;
+}

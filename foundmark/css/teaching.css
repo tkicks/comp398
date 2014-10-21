@@ -1,0 +1,111 @@
+/* HTML Elements */
+
+body {
+	background: linear-gradient(180deg, black, white);
+	background-repeat: no-repeat;
+	font-family: 'Montserrat', Helvetica, Arial;
+}
+
+p {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+footer {
+	color: #000;
+}
+
+footer #hr {
+	border: none;
+	border-color: #ff0;
+	border-top: thick double;
+	text-align: center;
+}
+
+/* Classes */
+
+.academicyear {
+	border-bottom: solid;
+}
+
+.centeredtext {
+  	font-family: 'Montserrat', Helvetica, Arial;
+	text-align: center;
+}
+
+.centeredtext1 {
+	color: #fff;
+  	font-family: 'Montserrat', Helvetica, Arial;
+	text-align: center;
+}
+
+.featuredimage {
+	height:	350px;
+	line-height: 350px;
+	text-align: center;
+	vertical-align: middle;
+	width:	350px;
+}
+
+.float-right {
+	display: inline-block;
+	float: right;
+}
+
+.icon {
+	height: 30px;
+	width: 30px;
+}
+
+.image-link {
+	height: 60%;
+	width: 60%;
+}
+
+.poem {
+	border: double;
+	width: 350px;
+}
+
+.previewtext {
+	font-size: 60%;
+}
+
+.reveal-modal {
+	border: none;
+}
+
+.tabs {
+	margin-left: 100px;
+	text-align: center;
+}
+
+/* IDs */
+
+#grampsimage {
+	height: 40%;
+	width: 40%;
+}
+
+#header-text {
+	color: #fff;
+}
+
+#fall {
+	float: left;
+	margin-left: 100px;
+	width: 35%;
+}
+
+#spring {
+	float: right;
+	margin-right: 100px;
+	text-align: left;
+	width: 35%;
+}
+
+#sabbatical-text {
+	margin-left: 100px;
+	margin-right: 100px;
+	width: 80%;
+}
