@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lazy Caterer's Sequence</title>
+		<style>
+			#zebra {color: #fff; background-color: #000; width: 100px;}
+		</style>
+	</head>
+
+	<body>
+
+		<script>
+
+			var n = prompt("Enter a value to stop at", "n"),
+			values = [],
+			list_location = 0,
+			print_here = document.getElementById("display_sequence");
+			table = document.getElementById("the_table");
+
+
+			for (var i = 0; i <= n; i++, list_location++) {
+				values[list_location] = (i*(i+1)/2 + 1);
+			};
+
+			document.write("n  |  lazy caterer(n)");
+			document.write("\n");
+
+			for (var k = 0; k < list_location; k++) {
+				console.log(values[k]);
+				if ((k%2) === 0) {
+					document.write("<pre>" + k + "\t" + values[k] + "\n</pre>");
+				}
+				else {
+					document.write("<pre id='zebra'>" + k + "\t" + values[k] + "\n</pre>");
+				}
+			}
+
+		</script>
+
+		<div id="display_sequence">
+		</div>
+
+	</body>
+</html>

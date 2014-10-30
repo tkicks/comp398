@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SVG</title>
+		<style>
+			div {margin-left: 30%}
+			svg {margin-left: 30%}
+		</style>
+	</head>
+
+	<body>
+
+		<div>
+			<p>
+			High and Low Temps for October 29-31
+			</p>
+		</div>
+
+		<svg version="1.1" baseProfile="full" x="300" y="300" width="1000px" height="700px" xmlns="http://www.w3.org/2000/svg" role="img">	<!-- <-namespace -->
+			<rect id="Oct29_high" x="0" y="0" width="210" height="100" style="fill: rgb(255, 0, 0)" role="img"/>
+				<desc="high on Oct 29"/>
+				<text x="0" y="50" z-index="1000" fill="white">Oct 29: 70</text>
+			<rect id="Oct29_low" x="210" y="0" width="132" height="100" style="fill: rgb(0, 0, 255)" role="img" />
+				<desc="low on Oct 29"/>
+				<text x="210" y="50" fill="white">Oct 29: 44</text>
+
+			<rect id="Oct30_high" x="0" y="200" width="171" height="100" style="fill: rgb(255, 0, 0)" role="img"/>
+				<desc="high on Oct 29"/>
+				<text x="0" y="250" fill="white">Oct 30: 57</text>
+			<rect id="Oct30_low" x="171" y="200" width="111" height="100" style="fill: rgb(0, 0, 255)" role="img"/>
+				<desc="low on Oct 29"/>
+				<text x="171" y="250" fill="white">Oct 30: 37</text>
+
+			<rect id="Oct31_high" x="0" y="400" width="171" height="100" style="fill: rgb(255, 0, 0)" role="img"/>
+				<desc="high on Oct 29"/>
+				<text x="0" y="450" fill="white">Oct 31: 57</text>
+			<rect id="Oct31_low" x="171" y="400" width="117" height="100" style="fill: rgb(0, 0, 255)" role="img" />
+				<desc="low on Oct 29"/>
+				<text x="171" y="450" fill="white">Oct 31: 39</text>
+		</svg>
+
+		<div id="display">
+		</div>
+
+		<script>
+			var display = document.getElementById("display");
+			window.on('mouseover', function(ids) {
+				if ((ids.target).attr('id') != '') {
+					var id = ids.target.attr('id');
+					display.text(id);
+				}
+			});
+		</script>
+
+	</body>
+</html>
