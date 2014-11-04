@@ -2,7 +2,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 // Connect to the db
-MongoClient.connect("mongodb://tkicks:riseagainstme122@ds047440.mongolab.com:47440/tkicks", function(err, db) {
+MongoClient.connect("mongodb://demoUser:passwd1@ds047440.mongolab.com:47440/tkicks", function(err, db) {
 	if(err) { return console.dir(err); }
 
 	console.dir("connected");
