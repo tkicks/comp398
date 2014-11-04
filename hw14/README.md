@@ -1,0 +1,1 @@
+This script will connect to my database on Mongolab and delete the documents in collection hw14. It will then fill up collection hw14 with around 2500 documents. There's some inconsistencies in how many documents actually get written that I can't figure out. The documents write a repeated message in binary.

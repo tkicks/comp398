@@ -2,29 +2,54 @@
 var MongoClient = require('mongodb').MongoClient;
 
 // Connect to the db
-MongoClient.connect("mongodb://<uname>:<pwd>@ds047440.mongolab.com:47440/tkicks", function(err, db) {
+MongoClient.connect("mongodb://tkicks:riseagainstme122@ds047440.mongolab.com:47440/tkicks", function(err, db) {
 	if(err) { return console.dir(err); }
 
 	console.dir("connected");
 
-	var collection = db.collection('test');
-	var doc1 = {'pi':'3'};
-	// db.collection('test', function(err, collection) {});
-	// console.dir("Test collection not yet created. Add documents to create.");
+	var i,
+		counter = 0;
+	var collection = db.collection('hw14');
+	var T = '01010100';
+	var Y = '01011001';
+	var L = '01001100';
+	var E = '01000101';
+	var R = '01010010';
 
-	// db.collection('test', {strict:true}, function(err, collection) {});
-	// console.dir("If collection !exist error");
-
-	// db.createCollection('test', function(err, collection) {});
-	// console.dir("Create a collection on Mongodb database");
-
-	if(collection) {
-		db.collection.remove();
+	if (collection.find(function(err, result) {}) !== null) {
+		collection.remove(function(err, result) {});
+		console.dir("removed collection's documents");
 	}
 
-	db.createCollection('test', {strict:true}, function(err, collection) {});
-	collection.insert(doc1, {w:1}, function(err, result) {});
-	console.dir("inserted first digit of pi");
-	// console.dir("This should be an error...");
+	db.createCollection('hw14', {strict:true}, function(err, collection) {});
+
+	for (i = 0; i < 2500; i++)
+	{
+		if (counter === 0) {
+			collection.insert({"letter":T}, {w:1}, function(err, result) {});
+			counter++;
+		}
+		else if (counter === 1) {
+			collection.insert({"letter":Y}, {w:1}, function(err, result) {});
+			counter++;
+		}
+		else if (counter === 2) {
+			collection.insert({"letter":L}, {w:1}, function(err, result) {});
+			counter++;
+		}
+		else if (counter === 3) {
+			collection.insert({"letter":E}, {w:1}, function(err, result) {});
+			counter++;
+		}
+		else if (counter === 4) {
+			collection.insert({"letter":R}, {w:1}, function(err, result) {});
+			counter++;
+		}
+		if (counter === 5) {
+			counter = 0;
+		}
+	}
+
+	console.dir('added documents to hw14');
 
 });
