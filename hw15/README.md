@@ -1,0 +1,1 @@
+The collections will all be different binary codes for different interactions with the keyboard.  One collection will have the binary codes for each capitalized letter, one for each lowercase letter, one for each number (up to 25 for the time being), and one for symbols.  Need a fifth collection, maybe extra keys, like the arrows and home, etc.
