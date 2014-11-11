@@ -1,3 +1,7 @@
+/*
+	put documents into an array then insert array into db
+*/
+
 // Retrieve
 var MongoClient = require('mongodb').MongoClient;
 
@@ -8,7 +12,8 @@ MongoClient.connect("mongodb://demoUser:passwd1@ds047440.mongolab.com:47440/tkic
 	console.dir("connected");
 
 	var i,
-		counter = 0;
+		counter = 0,
+		arrayOfDocs = [2500];
 	var collection = db.collection('hw14');
 	var T = '01010100';
 	var Y = '01011001';
