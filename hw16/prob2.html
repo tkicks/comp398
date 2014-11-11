@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cats</title>
+
+        <style>
+            body {background: orange}
+            img {border: 5px dotted black; border-radius: 5px}
+            .wrapper {text-align: center}
+            .wrapper2 {text-align: center; margin-top: 40px}
+            .image {margin-left: 75px}
+            #comp-text {color: yellow; position: absolute; margin-top: 50px; margin-left: 450px; text-align: center; font-size: 100px; z-index: 10000; font-family: Helvetica}
+            /* this part rotates each image and moves it over 20px from the last one
+               coln is used because initally each row was going to be rotated the same
+               amount, then I realized they weren't and didn't change it */
+            #col2 {-webkit-transform: rotate(30deg); margin-left: 20px}
+            #col3 {-webkit-transform: rotate(60deg); margin-left: 20px}
+            #col4 {-webkit-transform: rotate(90deg); margin-left: 20px}
+            #col5 {-webkit-transform: rotate(120deg); margin-left: 20px}
+            #col6 {-webkit-transform: rotate(150deg); margin-left: 20px}
+            #col7 {-webkit-transform: rotate(180deg); margin-left: 20px}
+            #col8 {-webkit-transform: rotate(210deg); margin-left: 20px}
+            #col9 {-webkit-transform: rotate(240deg); margin-left: 20px}
+            #col10 {-webkit-transform: rotate(270deg); margin-left: 20px}
+            #col11 {-webkit-transform: rotate(300deg); margin-left: 20px}
+            #col12 {margin-left: 20px}
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- first row of images -->
+        <div class="wrapper">
+            <p id="comp-text">COMP 398</p>
+            <img class="image" id="col1" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col2" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col3" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col4" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+        </div>
+
+        <!-- second row of images -->
+        <!-- second and third rows have class wrapper2 because they have a top margin undesired in
+             the first row -->
+        <div class="wrapper2">
+            <img class="image" id="col5" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col6" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col7" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col8" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+        </div>
+
+        <!-- third row of images -->
+        <div class="wrapper2">
+            <img class="image" id="col9" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col10" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col11" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+            <img class="image" id="col12" src="http://placekitten.com/g/200/200" alt="placekitten1" />
+        </div>
+
+    </body>
+</html>
