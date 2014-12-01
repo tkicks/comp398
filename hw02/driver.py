@@ -43,7 +43,6 @@ def main():
 
             while current_node.next != None:
                 if current_node.cargo[0] == search_for.upper():
-                    # if state starts with input, has_state = True
                     print current_node.cargo
                     has_state = True
                 current_node = current_node.next
