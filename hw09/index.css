@@ -9,6 +9,10 @@ footer {
 	position: absolute;
 }
 
+#white_text {
+	color: white;
+}
+
 .department_stats {
 	font-size: 2em;
 	margin-left: 250px;
