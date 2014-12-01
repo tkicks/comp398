@@ -4,18 +4,22 @@
 # above disables R0903 -- too few public methods in Node class
 
 class Node(object):
-    """make an empty node"""
+    """make an empty node
+    """
     def __init__(self):
         self.cargo = None
         self.next = None
 
 class LinkedList(object):
-    """initialize the list"""
+    """initialize the list
+    """
     def __init__(self):
         self.head = None
 
     def new_node(self, text):
-        """add the content to the node then add the node to the linked list"""
+        """add the content to the node then add the node to the linked list
+        parameters: text string 
+        """
         new_node = Node()
         # remove the "s and 's -----
         text = text.replace("'", "")
@@ -28,7 +32,8 @@ class LinkedList(object):
 
     def print_list(self):
         """print the list to the console
-        (currently prints in reverse alphabetical order)"""
+        (currently prints in reverse alphabetical order)
+        """
         current_node = self.head
         while current_node.next != None:
             print current_node.cargo
